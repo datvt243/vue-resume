@@ -1,0 +1,139 @@
+@charset "utf-8"
+
+
+/* ADDITIONAL RESET
+ * -----------------------------------------------*/
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+*
+  outline: none
+
+body *
+  max-height: 99999em
+
+img
+  display: inline-block
+  vertical-align: middle
+  max-width: 100%
+
+input,
+label,
+select,
+button,
+textarea
+  margin: 0
+  border: 0
+  padding: 0
+  display: inline-block
+  vertical-align: middle
+  white-space: normal
+  background: none
+  font: inherit
+  line-height: 1
+
+input:focus,
+button:focus,
+select:focus
+  outline: 0
+
+/* Make webkit render the search input like a normal text field */
+input[type=search]
+  -webkit-appearance: textfield
+
+/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+::-webkit-search-decoration
+  display: none
+
+/* Turn off scroll bars in IE unless needed */
+textarea
+  overflow: auto
+  white-space: pre-line
+
+/* PRINTING
+ * -----------------------------------------------*/
+
+@media print
+  body
+    -webkit-print-color-adjust: exact
+  html,
+  body
+    margin: 0
+  @page
+    margin: 0
+  @page :left
+    margin: 0
+  @page :right
+    margin: 0
+  @page :first
+    margin-top: 0
+
+/* GENERAL
+ * -----------------------------------------------*/
+html
+  font-size: 10px
+body
+  color: $base-font-color
+  font:
+    family: $base-font-roboto
+    size: $base-font-size
+    weight: $base-font-weight
+  line-height: $base-line-height
+  -webkit-text-size-adjust: none
+  -moz-text-size-adjust: none
+  -ms-text-size-adjust: none
+  background: 
+    color: $base-bg-color
+
+  +sm
+    font-size: 14px
+
+/* HELPERS
+ * -----------------------------------------------*/
+
+h1, h2, h3, h4, h5, h6
+  line-height: 1.4
+  font:
+    family: $base-font-heading
+    weight: 400
+
+strong, .strong
+  font-weight: 700
+
+small, .small
+  font-size: .9em
+
+a
+  color: $base-font-color
+  text-decoration: none
+
+.trans
+  transition: opacity .3s ease
+  &:hover
+    opacity: .7
+
+.hidden
+  display: none
+
+.invisible
+  visibility: hidden
+
+.wrapper
+  margin: 
+    left: auto
+    right: auto
+  &:not(:last-child)
+    margin-bottom: 30px
+
++lg
+  .lg-hidden
+    display: none !important
++md
+  .md-hidden
+    display: none !important
++sm
+  .sm-hidden
+    display: none !important

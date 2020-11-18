@@ -1,0 +1,94 @@
+@charset "utf-8"
+
+/* width */
+::-webkit-scrollbar 
+  width: 8px
+
+/* Track */
+::-webkit-scrollbar-track 
+  background: $semi-grey
+ 
+/* Handle */
+::-webkit-scrollbar-thumb 
+  background: $grey
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover 
+  background: #555
+
+
+$margins: 0, 5, 10, 20, 30, 40, 50
+.margin
+  &-0
+    margin: 0 !important
+  @each $margin in $margins
+    &-b#{$margin}
+      margin-bottom: #{$margin}px !important
+    &-t#{$margin}
+      margin-top: #{$margin}px !important
+    &-l#{$margin}
+      margin-left: #{$margin}px !important
+    &-r#{$margin}
+      margin-right: #{$margin}px !important
+
+$paddings: 0, 5, 10, 20, 30, 40, 50
+.padding
+  &-0
+    padding: 0 !important
+
+  @each $padding in $paddings
+    &-t#{$padding}
+      padding-top: #{$padding}px !important
+    &-r#{$padding}
+      padding-right: #{$padding}px !important
+    &-b#{$padding}
+      padding-bottom: #{$padding}px !important
+    &-l#{$padding}
+      padding-left: #{$padding}px !important
+
+hr
+  margin: 20px 0
+  border: 0
+    bottom: 1px solid rgba(255,255,255,.1)
+
+.middle
+  vertical-align: middle
+
+.margin
+  &-b0
+    margin-bottom: 0 !important
+
+.link
+  transition: all .3s ease
+  &:hover
+    color: $success
+
+.h-100
+  height: 100% !important
+
+.underline
+  text-decoration: underline !important
+
+.uppercase
+  text-transform: uppercase !important
+
+.capitalize
+  text-transform: capitalize !important
+
+.bold, .strong
+  font-weight: 700 !important
+.italic
+  font-style: italic !important
+
+.bg
+  &-site
+    color: #c2c2c2
+    background-color: #1c1e1f
+  &-grey
+    background-color: $grey
+
+.pointer
+  cursor: pointer
+  &-none
+    pointer-events: none
+    opacity: .5

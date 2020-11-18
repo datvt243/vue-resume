@@ -1,0 +1,51 @@
+@charset "utf-8"
+
+$textAlign: ['center', 'left', 'right']
+
+.text
+
+  @each $align in $textAlign
+    &-#{$align}
+      text-align: #{$align} !important
+
+  @each $name, $val in $colors
+    &-#{$name}
+      color: #{$val} !important
+
+  &-white
+    color: #fff !important
+  &-green
+    color: $color-main !important
+
+  &-inner
+    position: relative
+    line-height: 1.8
+    &:not(:last-child)
+      margin-bottom: 30px
+
+    > .clearfix
+      > *
+        &:not(:last-child):not(hr)
+          margin-bottom: 1em
+      &:not(:last-child)
+        margin-bottom: 3em
+
+    > *
+      &:not(:last-child)
+        margin-bottom: 1em
+
+    ul
+      padding: 0
+      list-style-type: none
+      li
+        position: relative
+        padding-left: 1em
+        &:before
+          content: ""
+          position: absolute
+          top: 12px
+          left: 0
+          width: 5px
+          height: 5px
+          background-color: currentColor
+          transform: rotate(10deg)

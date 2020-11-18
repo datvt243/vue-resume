@@ -1,0 +1,64 @@
+@charset "utf-8"
+
+.btn
+  display: inline-block
+  font-weight: 400
+  text-align: center
+  vertical-align: middle
+  user-select: none
+  border: 1px solid #333
+  padding: 5px 15px
+  line-height: 1.5
+  border-radius: $radius
+  transition: color .3s ease, background-color .3s ease, opacity .3s ease
+  min-height: 34px
+
+  svg.icon-svg + span, .text
+    display: inline-block
+    vertical-align: middle
+  
+  &:hover
+    opacity: .8
+
+  &:not(:disabled):not(.disabled)
+    cursor: pointer
+
+  &.is-block
+    display: block
+    width: 100%
+
+  &.is-md
+    font-size: 1.4em
+    padding: 10px 20px
+
+  &-primary
+    background-color: #fff
+    border: 1px solid $border
+  &-secondary
+    background-color: #eee
+    box-shadow: none
+    color: #424242
+    border-color: #eee
+
+  @each $name, $value in $colors
+
+    &.is-#{$name}
+      color: #fff
+      border-color: $value
+      background-color: $value !important
+    &.is-#{$name}-light
+      color: $value
+      border-color: $value
+      background-color: #fff
+
+  &-group
+    display: inline-flex
+    > *
+      &:not(first-child)
+        margin-right: -1px
+    .btn
+      border-radius: 0
+      &:first-child
+        border-radius: $radius 0 0 $radius
+      &:last-child
+        border-radius: 0 $radius $radius 0

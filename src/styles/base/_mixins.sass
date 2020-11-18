@@ -1,0 +1,34 @@
+@charset "utf-8"
+
+$ex-sm: 576px
+$sm:    576px
+$md:    768px
+$lg:    992px
+$ex-lg: 1200px
+
+=desktop-ie
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active)
+    @content
+=desktop-edge
+  @supports (-ms-ime-align: auto)
+    @content
+
+=tablet
+  @media screen and ( max-width: 1023px )
+    @content
+
+=sm
+  @media screen and ( max-width: $sm )
+    @content
+=md
+  @media screen and ( max-width: $md )
+    @content
+=lg
+  @media screen and ( max-width: $lg )
+    @content
+
+=text-wrap
+  overflow-wrap: break-word
+  +desktop-ie
+    word-break: break-all
+

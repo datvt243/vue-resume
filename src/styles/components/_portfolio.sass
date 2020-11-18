@@ -1,0 +1,58 @@
+@charset "utf-8"
+  
+.portfolio
+  
+  &-card
+    overflow: hidden
+    position: relative
+    border: 5px solid $color-main
+    &:not(:last-child)
+      margin-bottom: 10px
+
+    + .list-tags
+      margin-top: 15px
+    
+  &-link
+    display: block
+    color: currentColor
+    &:hover
+      img
+        transform: scale(1.1)
+
+  &-image
+    overflow: hidden
+    img
+      transition: all .5s
+      
+  &-heading
+    position: absolute
+    left: 0
+    bottom: 10px
+    width: 100%
+    z-index: 1
+    text-transform: uppercase
+    color: #fff
+    background-color: #333333
+    padding: 10px
+    font-family: $base-font-heading
+    letter-spacing: .05em
+
+  &-tags
+    display: flex
+    flex-wrap: wrap
+    $val: 5px
+    margin:
+      left: -#{$val}
+      right: -#{$val}
+    > li
+      padding:
+        left: #{$val}
+        right: #{$val}
+    .tag
+      display: inline-block
+      border-left: 5px solid $color-main
+      background-color: $semi-dark
+      line-height: 1
+      text-align: center
+      padding: 5px 10px
+      font-size: 13px

@@ -292,6 +292,11 @@ export default new Vuex.Store({
         to: "https://datvt243.github.io/vue-weather-app-simple/",
         heading: "Weather App",
         tags: ["VueCLI", "Vux", "API"]
+      },
+      {
+        to: "https://datvt243.github.io/vue-events-list-firebase/",
+        heading: "Event List with Firebase",
+        tags: ["VueCLI", "Vue-router", "Vuefire", "firebase"]
       }
     ]
   },

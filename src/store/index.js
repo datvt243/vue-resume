@@ -296,7 +296,12 @@ export default new Vuex.Store({
       {
         to: "https://datvt243.github.io/vue-events-list-firebase/",
         heading: "Event List with Firebase",
-        tags: ["VueCLI", "Vue-router", "Vuefire", "firebase"]
+        tags: ["VueCLI", "Vue-router", "Vuefire", "firebase-realtime-database"]
+      },
+      {
+        to: "https://datvt243.github.io/vue-todo-list-firebase/",
+        heading: "Todo List with Firebase",
+        tags: ["VueCLI", "Vuex", "Vuexfire", "firebase-realtime-database"]
       }
     ]
   },

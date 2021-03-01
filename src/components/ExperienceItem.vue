@@ -6,11 +6,11 @@
       </span>
     </p>
     <p class="timeline-job">
-      <span class="margin-r10"><BaseIconBriefcase /></span>
+      <span class="icon margin-r10"><BaseIconBriefcase /></span>
       <span class="middle">{{ experience.position }}</span>
     </p>
     <p class="timeline-school">
-      <span class="margin-r10"><BaseIconCompany /></span>
+      <span class="icon margin-r10"><BaseIconCompany /></span>
       <span class="middle">{{ experience.company }}</span>
     </p>
     <div class="text-inner">

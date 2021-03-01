@@ -16,6 +16,11 @@
           <BaseIconTwitter />
         </a>
       </li>
+      <li>
+        <a href="https://github.com/datvt243" class="trans" target="_blank">
+          <BaseIconGithub />
+        </a>
+      </li>
     </ul>
   </div>
 </template>

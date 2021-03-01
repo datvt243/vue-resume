@@ -84,8 +84,12 @@ export default new Vuex.Store({
         value: "85"
       },
       {
-        title: "JAVASCRIPT + JQUERY",
-        value: "60"
+        title: "JAVASCRIPT/ES6",
+        value: "55"
+      },
+      {
+        title: "JQUERY",
+        value: "70"
       },
       {
         title: "RESPONSIVE, PERFECTPIXEL",
@@ -157,7 +161,7 @@ export default new Vuex.Store({
     experience: [
       {
         time: "11/2014 - 09/2016",
-        position: "WEB DESIGNER - FRONTEND",
+        position: "WEB DESIGNER",
         company: "Zago - Thụy Điển",
         todos: [
           "Chịu trách nhiệm chỉnh sửa và gia công các trang web Wordpress và Shopify.",
@@ -169,7 +173,7 @@ export default new Vuex.Store({
       },
       {
         time: "10/2016 - 04/2019",
-        position: "WEB DESIGNER - FRONTEND",
+        position: "FRONT-END (HTML, CSS, Javascript)",
         company: "Vietry - Nhật Bản",
         todos: [
           "Chỉnh sửa ảnh và gia công các trang web của Nhật.",
@@ -190,7 +194,7 @@ export default new Vuex.Store({
       },
       {
         time: "06/2019 - 10/2020",
-        position: "FRONT-END DEVELOPER",
+        position: "FRONT-END (HTML, CSS, Javascript)",
         company: "Fastcoding - Nhật Bản",
         todos: [
           "Gia công các trang web của Nhật, đảm bảo chuẩn w3school",
@@ -283,6 +287,11 @@ export default new Vuex.Store({
       }
     ],
     portfolioVue: [
+      {
+        to: "https://datvt243.github.io/vue-countdown/",
+        heading: "Vue Countdown",
+        tags: ["Vuejs", "components"]
+      },
       {
         to: "https://datvt243.github.io/vue-todo-list-simple/",
         heading: "Todo List",

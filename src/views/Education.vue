@@ -10,7 +10,7 @@
             <span class="lable strong">{{ item.date }}</span>
           </p>
           <p class="timeline-job">
-            <span class="margin-r5">
+            <span class="icon margin-r5">
               <BaseIconUserGraduate />
             </span>
             <span class="middle">
@@ -21,7 +21,7 @@
             </span>
           </p>
           <p class="timeline-school">
-            <span class="margin-r10">
+            <span class="icon margin-r10">
               <BaseIconSchool />
             </span>
             <span class="middle">

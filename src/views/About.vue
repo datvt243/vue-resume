@@ -35,14 +35,17 @@
     </h3>
     <div class="text-inner">
       <p>
-        Với 5 năm kinh nghiệm front-end với HTML, CSS, JS. Tôi hy vọng được làm
-        việc ở lĩnh vực mới (Vuejs) để thử thách và phát triển bản thân.
+        Với 4 năm kinh nghiệm front-end với HTML, CSS, JS. Tôi hy vọng được làm
+        việc ở lĩnh vực mới để thử thách và phát triển bản thân.
+      </p>
+      <p class="mb-0">
+        Mong muốn tìm được nơi làm việc:
       </p>
       <ul>
-        <li>Mong muốn tìm được chỗ làm ổn định lâu dài</li>
-        <li>Mong muốn tìm được chỗ làm có cơ hội thăng tiến tốt</li>
-        <li>Mong muốn tìm được chỗ làm có mức lương tốt</li>
-        <li>Mong muốn tìm được nơi có cơ hội cống hiến bản thân tốt</li>
+        <li>Ổn định lâu dài</li>
+        <li>Có cơ hội thăng tiến tốt</li>
+        <li>Có mức lương tốt</li>
+        <li>Có cơ hội cống hiến bản thân tốt</li>
       </ul>
     </div>
   </div>

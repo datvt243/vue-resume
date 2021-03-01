@@ -35,7 +35,7 @@
         </h2>
         <div class="text-inner">
           <p>
-            Trong 5 năm, tôi đã thiết kế và phát triển các trang web.
+            Trong 4 năm, tôi đã thiết kế và phát triển các trang web.
           </p>
           <div class="clearfix">
             <h3 class="heading-secondary">Front-end</h3>

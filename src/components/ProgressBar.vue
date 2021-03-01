@@ -21,7 +21,7 @@ export default {
       default: "ProgressBar"
     },
     value: {
-      type: Number,
+      type: [Number, String],
       default: 90
     }
   }

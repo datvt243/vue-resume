@@ -10,15 +10,17 @@
       {{ $store.state.personInfo.job }}
     </p>
     <div class="d-flex justify-content-center align-items-center">
-      <div class="column sex">
-        {{ $store.state.personInfo.sex }}
-        <!-- <BaseIconMars classname="is-medium" /> -->
+      <div class="column">
+        <span class="sex text-uppercase">
+          {{ $store.state.personInfo.sex }}
+          <!-- <BaseIconMars classname="is-medium" /> -->
+        </span>
       </div>
       <div class="column">
         |
       </div>
       <div class="column">
-        <span class="old">
+        <span class="old text-uppercase">
           {{ $store.state.personInfo.birthday }}
         </span>
       </div>

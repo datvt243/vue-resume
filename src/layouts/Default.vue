@@ -21,14 +21,16 @@
             </div>
             <div class="site-person d-none d-md-block">
               <div class="bg-site h-100">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <div class="column">
-                    <PersonWrapper></PersonWrapper>
-                  </div>
-                  <div class="column">
-                    <p class="copyright">
-                      2020 &copy; copyright by me
-                    </p>
+                <div class="site-overflow h-100">
+                  <div class="d-flex flex-column justify-content-between h-100">
+                    <div class="column">
+                      <PersonWrapper></PersonWrapper>
+                    </div>
+                    <div class="column">
+                      <p class="copyright">
+                        2020 &copy; copyright by me
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>

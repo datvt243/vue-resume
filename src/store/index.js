@@ -49,7 +49,7 @@ export default new Vuex.Store({
       },
       {
         icon: "BaseIconAddress",
-        text: "14/13/69 Thân Nhân Trung, Tân Bình, TP. Hồ Chí Minh"
+        text: "14/13 Thân Nhân Trung, P13, Tân Bình, TP. Hồ Chí Minh"
       },
       {
         icon: "BaseIconSkype",

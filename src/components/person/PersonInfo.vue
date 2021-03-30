@@ -6,7 +6,7 @@
     <h1 class="name">
       {{ $store.state.personInfo.name }}
     </h1>
-    <p class="job text-green">
+    <p class="job text-green text-uppercase">
       {{ $store.state.personInfo.job }}
     </p>
     <div class="d-flex justify-content-center align-items-center">
@@ -25,6 +25,11 @@
         </span>
       </div>
     </div>
+    <div class="download mt-4">
+      <a :href="$store.state.filePDF" class="btn btn-download" download>
+        Download CV
+      </a>
+    </div>
   </div>
 </template>
 
@@ -35,6 +40,13 @@ export default {
 </script>
 
 <style lang="sass" scope>
+.btn.btn-download
+  letter-spacing: .05em
+  padding:
+    left: 30px
+    right: 30px
+  border: 1px solid #42b983
+    radius: 999px
 .person
   &-info
     text-align: center

@@ -1,9 +1,9 @@
 <template lang="pug">
   .portfolio-vue
-    h2.heading-primary Project Vue Simple
+    h2.heading-primary Project Typescript Simple
     .clearfix
       ul.row.margin
-        li.col-sm-12.col-md-6(v-for='(item, index) in getPortfolioVue' :key='index')
+        li.col-sm-12.col-md-6(v-for='(item, index) in getPortfolioTypescript' :key='index')
           .portfolio
             .portfolio-card
               .portfolio-heading
@@ -30,7 +30,7 @@ import { mapGetters } from "vuex";
 export default {
   name: "PortfolioVue",
   computed: {
-    ...mapGetters(["getPortfolioVue", "getGithub"]),
+    ...mapGetters(["getPortfolioTypescript", "getGithub"]),
     getLink() {
       return `https://${this.getGithub}.github.io/`;
     },

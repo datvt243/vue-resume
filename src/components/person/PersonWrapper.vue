@@ -1,14 +1,12 @@
-<template>
-  <div class="person-wrapper">
-    <div class="person-widget">
-      <PersonInfo></PersonInfo>
-    </div>
-    <div class="person-widget">
-      <PersonContact></PersonContact>
-      <hr class="hr" />
-      <Social></Social>
-    </div>
-  </div>
+<template lang="pug">
+  .person-wrapper
+    .person-widget
+      PersonInfo
+    .person-widget
+      PersonContact
+      hr.hr
+      Social
+
 </template>
 
 <script>

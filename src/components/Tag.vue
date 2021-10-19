@@ -1,12 +1,9 @@
-<template>
-  <span class="tag">
-    <span class="icon" v-if="icon != ''">
-      <component :is="icon" />
-    </span>
-    <span class="text">
-      {{ tag }}
-    </span>
-  </span>
+<template lang="pug">
+  span.tag
+    span.icon(v-if="icon != ''")
+      component(:is='icon')
+    span.text
+      | {{ tag }}
 </template>
 
 <script>

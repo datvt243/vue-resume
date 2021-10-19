@@ -40,6 +40,16 @@ const routes = [
     component: () => import("../views/PortfolioVue.vue")
   },
   {
+    path: "/portfolio-nodejs",
+    name: "PortfolioVue",
+    component: () => import("../views/PortfolioNodejs.vue")
+  },
+  {
+    path: "/portfolio-typescript",
+    name: "PortfolioTypescript",
+    component: () => import("../views/PortfolioTypescript.vue")
+  },
+  {
     path: "*",
     name: "404",
     redirect: "/"

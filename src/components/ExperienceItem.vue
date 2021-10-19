@@ -1,36 +1,25 @@
-<template>
-  <div class="timeline-item experience-item">
-    <p class="timeline-date">
-      <span class="lable strong">
-        {{ experience.time }}
-      </span>
-    </p>
-    <p class="timeline-job">
-      <span class="icon margin-r10"><BaseIconBriefcase /></span>
-      <span class="middle">{{ experience.position }}</span>
-    </p>
-    <p class="timeline-school">
-      <span class="icon margin-r10"><BaseIconCompany /></span>
-      <span class="middle">{{ experience.company }}</span>
-    </p>
-    <div class="text-inner">
-      <ul>
-        <li v-for="(todo, todoIndex) in experience.todos" :key="todoIndex">
-          {{ todo }}
-        </li>
-      </ul>
-      <p
-        class="timeline-desc"
-        v-if="experience.desc"
-        v-html="experience.desc"
-      ></p>
-    </div>
-    <ul class="d-flex flex-wrap margin">
-      <li v-for="(tag, tagIndex) in experience.tags" :key="tagIndex">
-        <Tag :tag="tag" />
-      </li>
-    </ul>
-  </div>
+<template lang="pug">
+  .timeline-item.experience-item
+    p.timeline-date
+      span.lable.strong
+        | {{ experience.time }}
+    p.timeline-job
+      span.icon.margin-r10
+        BaseIconBriefcase
+      span.middle {{ experience.position }}
+    p.timeline-school
+      span.icon.margin-r10
+        BaseIconCompany
+      span.middle {{ experience.company }}
+    .text-inner
+      ul
+        li(v-for='(todo, todoIndex) in experience.todos' :key='todoIndex')
+          | {{ todo }}
+      p.timeline-desc(v-if='experience.desc' v-html='experience.desc')
+    ul.d-flex.flex-wrap.margin
+      li(v-for='(tag, tagIndex) in experience.tags' :key='tagIndex')
+        tag(:tag='tag')
+
 </template>
 
 <script>

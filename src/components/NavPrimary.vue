@@ -1,29 +1,23 @@
-<template>
-  <nav class="nav-primary">
-    <ul class="nav-menu">
-      <li class="nav-item d-md-none">
-        <router-link tag="a" class="nav-link link trans" to="/person">
-          <div class="avatar-item">
-            <img src="@/assets/avatar.jpg" alt="Võ Tấn Đạt" />
-          </div>
-        </router-link>
-      </li>
-      <li
-        class="nav-item"
-        v-for="(item, index) in $store.state.menuPrimary"
-        :key="index"
-      >
-        <router-link tag="a" class="nav-link link trans" :to="item.to">
-          <component class="is-large" :is="item.icon" />
-        </router-link>
-      </li>
-    </ul>
-  </nav>
+<template lang="pug">
+  nav.nav-primary
+    ul.nav-menu
+      li.nav-item.d-md-none
+        router-link.nav-link.link.trans(tag='a' to='/person')
+          .avatar-item
+            img(src='@/assets/avatar.jpg' alt='Võ Tấn Đạt')
+      li.nav-item(v-for='(item, index) in getMenuPrimary' :key='index')
+        router-link.nav-link.link.trans(tag='a' :to='item.to')
+          component.is-large(:is='item.icon')
+
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
-  name: "NavPrimary"
+  name: "NavPrimary",
+  computed: {
+    ...mapGetters(["getMenuPrimary"])
+  }
 };
 </script>
 

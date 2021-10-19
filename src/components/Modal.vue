@@ -1,18 +1,14 @@
-<template>
-  <div class="modal">
-    <div class="inner">
-      <div class="header">
-        <span class="icon trans" @click="$emit('close')">
-          <BaseIconClose />
-        </span>
-        <slot name="header"></slot>
-      </div>
-      <div class="main">
-        <slot name="main"></slot>
-      </div>
-    </div>
-    <div class="over" @click="$emit('close')"></div>
-  </div>
+<template lang="pug">
+  .modal
+    .inner
+      .header
+        span.icon.trans(@click="$emit('close')")
+          BaseIconClose
+        slot(name='header')
+      .main
+        slot(name='main')
+    .over(@click="$emit('close')")
+
 </template>
 
 <script>

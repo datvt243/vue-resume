@@ -1,22 +1,22 @@
-<template>
-  <div class="experience">
-    <h2 class="heading-primary">
-      Kinh Nghiệm Làm Việc
-    </h2>
-    <ul class="timeline-list">
-      <li v-for="(item, index) in $store.state.experience" :key="index">
-        <ExperienceItem :experience="item"></ExperienceItem>
-      </li>
-    </ul>
-  </div>
+<template lang="pug">
+  .experience
+    h2.heading-primary
+      | Kinh Nghiệm Làm Việc
+    ul.timeline-list
+      li(v-for='(item, index) in getExperience' :key='index')
+        ExperienceItem(:experience='item')
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import ExperienceItem from "@/components/ExperienceItem.vue";
 export default {
   name: "Experience",
   components: {
     ExperienceItem
+  },
+  computed: {
+    ...mapGetters(["getExperience"])
   }
 };
 </script>

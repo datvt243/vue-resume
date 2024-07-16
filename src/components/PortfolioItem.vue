@@ -1,28 +1,17 @@
-<template>
-  <div class="portfolio">
-    <div class="portfolio-card">
-      <a
-        href="#"
-        class="portfolio-link"
-        @click.prevent="showModal = !showModal"
-      >
-        <p class="portfolio-heading">{{ heading }}</p>
-        <div class="portfolio-image">
-          <img :src="img" :alt="heading" />
-        </div>
-      </a>
-    </div>
-    <transition name="dropdown">
-      <Modal v-if="showModal" @close="showModal = false">
-        <p class="title" slot="header">
-          {{ heading }}
-        </p>
-        <div slot="main">
-          <img :src="img" :alt="heading" class="w-full image" />
-        </div>
-      </Modal>
-    </transition>
-  </div>
+<template lang="pug">
+  .portfolio
+    .portfolio-card
+      a.portfolio-link(href='#' @click.prevent='showModal = !showModal')
+        p.portfolio-heading {{ heading }}
+        .portfolio-image
+          img(:src='img' :alt='heading')
+    transition(name='dropdown')
+      Modal(v-if='showModal' @close='showModal = false')
+        p.title(slot='header')
+          | {{ heading }}
+        div(slot='main')
+          img.w-full.image(:src='img' :alt='heading')
+
 </template>
 
 <script>

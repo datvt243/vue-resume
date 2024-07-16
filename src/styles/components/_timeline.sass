@@ -6,7 +6,7 @@
     padding-left: 20px
     > li
       padding: 10px 10px 30px 30px
-      border-left: 4px dashed $color-main
+      border-left: 3px dashed $color-main
       position: relative
 
       &:after
@@ -22,9 +22,14 @@
       &:last-child
         padding-bottom: 20px
 
+  &-item
+    .text-inner
+      &:not(:last-child)
+        margin-bottom: 15px
+
   &-date
     letter-spacing: .05em
-    margin-bottom: 10px
+    margin-bottom: 15px
 
     .lable
       display: inline-block
@@ -32,7 +37,6 @@
       color: #fff
       font-size: 14px
       padding: 8px 10px
-      margin-bottom: 10px
       position: relative
       line-height: 1
 
@@ -54,7 +58,7 @@
   &-school
     color: #fff
     font:
-      size: 22px
+      size: 20px
       family: $base-font-heading
     text-transform: capitalize
     margin-bottom: 18px
@@ -63,10 +67,10 @@
   &-job
     color: #fff
     font:
-      size: 26px
+      size: 24px
       family: $base-font-heading
     text-transform: uppercase
-    margin-bottom: 10px
+    margin-bottom: 0
     opacity: 1 !important
 
   &-des
@@ -77,15 +81,42 @@
     &-list
       padding-left: 10px
       > li
-        padding-left: 20px
+        padding:
+          left: 20px
+          bottom: 10px
         border-left-width: 2px
         &:after
           width: 15px
           height: 15px
           left: -9px
+          // top: 18px
+
+    &-date
+      .lable
+        padding:
+          top: 5px
+          bottom: 5px
+        &:after
+          border-width: 14px
+          margin-top: -14px
 
     &-job
-      font-size: 22px
+      font-size: 16px
+      margin-bottom: 10px
+      .icon
+        display: none
 
     &-school
-      font-size: 20px
+      font-size: 14px
+      margin-bottom: 10px
+      .icon
+        display: none
+      
+
+  @media (max-width: 320px)
+
+    &-job
+      font-size: 16px
+
+    &-school
+      font-size: 14px

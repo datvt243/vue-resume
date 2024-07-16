@@ -1,7 +1,6 @@
-<template>
-  <div class="person">
-    <PersonWrapper></PersonWrapper>
-  </div>
+<template lang="pug">
+  .person
+    PersonWrapper
 </template>
 
 <script>

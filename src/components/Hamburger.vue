@@ -1,7 +1,6 @@
-<template>
-  <div class="hamburger">
-    <BaseIconBars />
-  </div>
+<template lang="pug">
+  .hamburger
+    BaseIconBars
 </template>
 
 <script>

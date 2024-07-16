@@ -1,12 +1,9 @@
-<template>
-  <span class="tag">
-    <span class="icon" v-if="icon != ''">
-      <component :is="icon" />
-    </span>
-    <span class="text">
-      {{ tag }}
-    </span>
-  </span>
+<template lang="pug">
+  span.tag
+    span.icon(v-if="icon != ''")
+      component(:is='icon')
+    span.text
+      | {{ tag }}
 </template>
 
 <script>
@@ -38,4 +35,7 @@ export default {
   .icon, .text
     display: inline-block
     vertical-align: middle
+  @media (max-width: 576px)
+    font-size: 12px
+    padding: 4px 10px
 </style>

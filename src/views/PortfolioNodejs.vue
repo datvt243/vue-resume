@@ -1,9 +1,9 @@
 <template lang="pug">
   .portfolio-vue
-    h2.heading-primary Project Vue Simple
+    h2.heading-primary Project Nodejs Simple
     .clearfix
       ul.row.margin
-        li.col-sm-12.col-md-6(v-for='(item, index) in getPortfolioVue' :key='index')
+        li.col-sm-12.col-md-6(v-for='(item, index) in getPortfolioNodejs' :key='index')
           .portfolio
             .portfolio-card
               .portfolio-heading
@@ -11,9 +11,9 @@
                   span
                     | {{ item.heading }}
                   span.d-flex
-                    span.ico.pl-0
-                      a.trans.portfolio-link(:href='getLink + item.project' target='_blank')
-                        BaseIconExternalLink
+                    //- span.ico.pl-0
+                    //-   a.trans.portfolio-link(:href='getLink + item.project' target='_blank')
+                    //-     BaseIconExternalLink
                     span.ico.pr-0
                       a.trans.portfolio-link(:href='getSource + item.project' target='_blank')
                         BaseIconGit
@@ -30,7 +30,7 @@ import { mapGetters } from "vuex";
 export default {
   name: "PortfolioVue",
   computed: {
-    ...mapGetters(["getPortfolioVue", "getGithub"]),
+    ...mapGetters(["getPortfolioNodejs", "getGithub"]),
     getLink() {
       return `https://${this.getGithub}.github.io/`;
     },

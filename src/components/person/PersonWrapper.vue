@@ -1,14 +1,12 @@
-<template>
-  <div class="person-wrapper">
-    <div class="person-widget">
-      <PersonInfo></PersonInfo>
-    </div>
-    <div class="person-widget">
-      <PersonContact></PersonContact>
-      <hr class="hr" />
-      <Social></Social>
-    </div>
-  </div>
+<template lang="pug">
+  .person-wrapper
+    .person-widget
+      PersonInfo
+    .person-widget
+      PersonContact
+      hr.hr
+      Social
+
 </template>
 
 <script>
@@ -34,7 +32,7 @@ export default {
     position: relative
     width: 300px
     max-width: 100%
-    padding: 50px 0
+    padding: 30px 0
     margin:
       left: auto
       right: auto
@@ -43,7 +41,11 @@ export default {
       margin-bottom: 30px
       padding-bottom: 30px
       border-bottom: 1px solid rgba(255,255,255,.1)
-  @media (max-width: 991px)
+  @media (max-width: 576px)
     &-wrapper
-      width: 270px
+      width: 240px
+  @media (max-width: 320px)
+    &-wrapper
+      width: 200px
+      padding: 10px 0
 </style>

@@ -1,23 +1,19 @@
-<template>
-  <div class="social-wrapper">
-    <ul class="d-flex justify-content-center align-items-center">
-      <li>
-        <a href="#" class="trans pointer-none" target="_blank">
-          <BaseIconLinkedin />
-        </a>
-      </li>
-      <li>
-        <a href="#" class="trans pointer-none" target="_blank">
-          <BaseIconFacebook />
-        </a>
-      </li>
-      <li>
-        <a href="#" class="trans pointer-none" target="_blank">
-          <BaseIconTwitter />
-        </a>
-      </li>
-    </ul>
-  </div>
+<template lang="pug">
+  .social-wrapper
+    ul.d-flex.justify-content-center.align-items-center.mb-0
+      li
+        a.trans(href='https://www.linkedin.com/in/datvt243' target='_blank')
+          BaseIconLinkedin
+      li
+        a.trans(href='https://github.com/datvt243' target='_blank')
+          BaseIconGithub
+      li
+        a.trans.pointer-none(href='#' target='_blank')
+          BaseIconFacebook
+      li
+        a.trans.pointer-none(href='#' target='_blank')
+          BaseIconTwitter
+
 </template>
 
 <script>

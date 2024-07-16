@@ -1,15 +1,11 @@
-<template>
-  <div class="progress-bar">
-    <div class="d-flex justify-content-between align-items-center">
-      <p class="title">
-        {{ title }}
-      </p>
-      <p class="value text-green">{{ value }}%</p>
-    </div>
-    <div class="line">
-      <span class="active" :style="{ width: value + '%' }"></span>
-    </div>
-  </div>
+<template lang="pug">
+  .progress-bar
+    .d-flex.justify-content-between.align-items-center
+      p.title
+        | {{ title }}
+      p.value.text-green {{ value }}%
+    .line
+      span.active(:style="{ width: value + '%' }")
 </template>
 
 <script>
@@ -21,7 +17,7 @@ export default {
       default: "ProgressBar"
     },
     value: {
-      type: Number,
+      type: [Number, String],
       default: 90
     }
   }
@@ -38,6 +34,7 @@ export default {
     font-weight: 700
     color: #fff
     letter-spacing: .05em
+    line-height: 1.4
     text-transform: lowercase
   .line
     position: relative

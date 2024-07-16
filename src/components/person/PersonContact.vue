@@ -1,25 +1,20 @@
-<template>
-  <div class="person-contact">
-    <ul class="list-contact">
-      <li
-        class="item"
-        v-for="(item, index) in $store.state.personContact"
-        :key="index"
-      >
-        <div class="d-flex align-items-center">
-          <div class="icon text-green">
-            <component :is="item.icon" />
-          </div>
-          <div class="text" v-html="item.text"></div>
-        </div>
-      </li>
-    </ul>
-  </div>
+<template lang="pug">
+  .person-contact
+    ul.list-contact
+      li.item(v-for='(item, index) in getPersonContact' :key='index')
+        .d-flex.align-items-center
+          .icon.text-green
+            component(:is='item.icon')
+          .text(v-html='item.text')
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
-  name: "PersonContact"
+  name: "PersonContact",
+  computed: {
+    ...mapGetters(["getPersonContact"])
+  }
 };
 </script>
 

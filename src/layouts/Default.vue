@@ -21,14 +21,16 @@
             </div>
             <div class="site-person d-none d-md-block">
               <div class="bg-site h-100">
-                <div class="d-flex flex-column justify-content-between h-100">
-                  <div class="column">
-                    <PersonWrapper></PersonWrapper>
-                  </div>
-                  <div class="column">
-                    <p class="copyright">
-                      2020 &copy; copyright by me
-                    </p>
+                <div class="site-overflow h-100">
+                  <div class="d-flex flex-column justify-content-between h-100">
+                    <div class="column">
+                      <PersonWrapper></PersonWrapper>
+                    </div>
+                    <div class="column">
+                      <p class="copyright">
+                        2020 &copy; copyright by me
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -104,7 +106,7 @@ $padding: 40px
     padding-right: 15px
   @media (max-width: 767px)
     &-wrapper
-      padding: 15px
+      padding: 10px
     &-nav
       border-right: 1px solid #42b983
     &-nav, &-page
@@ -113,5 +115,10 @@ $padding: 40px
         bottom: 0
     &-page
       .bg-site
-        padding: 20px 10px 20px 20px
+        padding: 20px 10px 20px 15px
+  @media (max-width: 576px)
+    &-nav
+      $val: 50px
+      flex: 0 0 #{$val}
+      max-width: #{$val}
 </style>

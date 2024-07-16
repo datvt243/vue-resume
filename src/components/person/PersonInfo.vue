@@ -1,38 +1,47 @@
-<template>
-  <div class="person-info">
-    <figure class="avatar">
-      <img src="@/assets/avatar.jpg" :alt="$store.state.personInfo.name" />
-    </figure>
-    <h1 class="name">
-      {{ $store.state.personInfo.name }}
-    </h1>
-    <p class="job text-green">
-      {{ $store.state.personInfo.job }}
-    </p>
-    <div class="d-flex justify-content-center align-items-center">
-      <div class="column sex">
-        {{ $store.state.personInfo.sex }}
-        <!-- <BaseIconMars classname="is-medium" /> -->
-      </div>
-      <div class="column">
-        |
-      </div>
-      <div class="column">
-        <span class="old">
-          {{ $store.state.personInfo.birthday }}
-        </span>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+  .person-info
+    figure.avatar
+      img(src='@/assets/avatar.jpg' :alt='getPersonInfo.name')
+    h1.name
+      | {{ getPersonInfo.name }}
+    p.job.text-green.text-uppercase
+      | {{ getPersonInfo.job }}
+    .d-flex.justify-content-center.align-items-center
+      .column
+        span.sex.text-uppercase
+          | {{ getPersonInfo.sex }}
+          // <BaseIconMars classname="is-medium" />
+      .column
+        | |
+      .column
+        span.old.text-uppercase
+          | {{ getPersonInfo.birthday }}
+    .download.mt-4
+      a.btn.btn-download(:href='getFilePDF' download='')
+        | Download CV
+
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
-  name: "PersonInfo"
+  name: "PersonInfo",
+  computed: {
+    ...mapGetters(["getPersonInfo", "getFilePDF"])
+  }
 };
 </script>
 
 <style lang="sass" scope>
+.avatar
+  pointer-events: none
+.btn.btn-download
+  letter-spacing: .05em
+  padding:
+    left: 30px
+    right: 30px
+  border: 1px solid #42b983
+    radius: 999px
 .person
   &-info
     text-align: center
@@ -78,4 +87,7 @@ export default {
         font-size: 24px
       .job
         font-size: 16px
+  @media (max-width: 320px)
+    &-info
+      width: 90%
 </style>
